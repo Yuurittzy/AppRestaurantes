@@ -5,6 +5,8 @@ import com.google.gson.annotations.SerializedName
 data class Restaurant(@SerializedName("id") val id: Int?,
                       @SerializedName("nombre") val name: String?,
                       @SerializedName("calificacion") val grade: Double?,
+                      @SerializedName("lat") val lat: Double?,
+                      @SerializedName("lng") val lng: Double?,
                       @SerializedName("año") val year: Int?,
                       @SerializedName("costopromedio") val cost: Int?,
                       @SerializedName("photo") val photoOne: String?,

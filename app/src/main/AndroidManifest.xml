@@ -3,6 +3,10 @@
     package="com.example.lab_restaurantes_yuritzy_rodriguez">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 
     <application
         android:allowBackup="true"
@@ -11,12 +15,18 @@
         android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Lab_restaurantes_yuritzy_rodriguez">
+        android:theme="@style/Theme.Lab_restaurantes_yuritzy_rodriguez"
+        android:usesCleartextTraffic="true">
 
+        <meta-data android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key"/>
+
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
         <activity
             android:name=".RestaurantsActivity"
             android:exported="false" />
-
         <activity
             android:name=".RestaurantDetailActivity"
             android:exported="false" />
